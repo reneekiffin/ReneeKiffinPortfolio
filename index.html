@@ -6,8 +6,6 @@
   <title>Renee Kiffin</title>
   <meta name="description" content="Renee Kiffin — creative specializing in graphic design, photography, and digital strategy." />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Dancing+Script:wght@500;600;700&family=Cutive+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="css/custom.css" />
@@ -16,19 +14,34 @@
 
   <!-- ===================== HERO + NAV ===================== -->
   <section class="hero">
-    <div class="hero__img">
-      <img src="images/hero-camera.jpg" alt="Canon camera on a wooden surface" data-ph="Hero — camera" />
+    <div class="hero__bg">
+      <img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/c0fa5597-355f-48df-b09e-fbd333c16232/IMG_9747.jpg?format=2500w" alt="" />
     </div>
 
-    <nav class="navbar navbar-expand-md rk-navbar rk-navbar--over-dark">
+    <nav class="navbar navbar-expand-lg rk-navbar rk-navbar--over-dark">
       <div class="container rk-nav-inner">
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-            <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="portfolio.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Portfolio</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="portfolio.html">Graphic Design</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="brand-design.html">Brand Design</a></li>
+                <li><a class="dropdown-item" href="web-design.html">Web Design</a></li>
+                <li><a class="dropdown-item" href="tutoring.html">Tutoring</a></li>
+                <li><a class="dropdown-item" href="photo-retouching.html">Photo Retouching</a></li>
+                <li><a class="dropdown-item" href="photography.html">Photography</a></li>
+                <li><a class="dropdown-item" href="weddings.html">Wedding Stationary</a></li>
+              </ul>
+            </li>
             <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
             <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
           </ul>
@@ -37,12 +50,9 @@
       </div>
     </nav>
 
-    <div class="container hero__content">
-      <div class="col-lg-9">
-        <h1>Crafting Visual<br />Stories That</h1>
-        <span class="script">captivate</span>
-        <p class="hero__subtitle">Bringing Your Ideas to Life Through Thoughtful Design</p>
-      </div>
+    <div class="hero__content">
+      <h1>Crafting Visual Stories That <span class="script">Captivate</span></h1>
+      <p class="hero__subtitle">Bringing Your Ideas to Life Through Thoughtful Design</p>
     </div>
   </section>
 
@@ -50,29 +60,35 @@
   <section class="section">
     <div class="container">
       <h2 class="section-label mb-5">Recent Projects</h2>
-      <div class="row g-4">
-        <div class="col-6 col-lg-3">
+      <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-4">
+        <div class="col">
           <a class="project" href="portfolio.html">
-            <div class="project__img"><img src="images/project-lifestones.jpg" alt="Lifestones branding" data-ph="Lifestones" /></div>
+            <div class="project__img"><img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/7935be8d-49a3-426c-89ef-00ca458b6e02/business+cards.png?format=1000w" alt="Lifestone Gems and Minerals business cards" loading="lazy" /></div>
             <figcaption>Lifestones</figcaption>
           </a>
         </div>
-        <div class="col-6 col-lg-3">
+        <div class="col">
           <a class="project" href="portfolio.html">
-            <div class="project__img"><img src="images/project-globalpro.jpg" alt="GlobalPro branding" data-ph="GlobalPro" /></div>
+            <div class="project__img"><img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/f92cbce9-2b09-4e8f-af75-e58baabb6499/PH7A0001.jpg?format=1000w" alt="GlobalPro" loading="lazy" /></div>
             <figcaption>GlobalPro</figcaption>
           </a>
         </div>
-        <div class="col-6 col-lg-3">
+        <div class="col">
           <a class="project" href="portfolio.html">
-            <div class="project__img"><img src="images/project-oasis.jpg" alt="Oasis Express packaging" data-ph="Oasis Express" /></div>
+            <div class="project__img"><img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/4e45651c-8e3a-426f-9f1b-adae38529262/Tropical+Oasis+Express+Box+Mockup.jpg?format=1000w" alt="Oasis Express packaging" loading="lazy" /></div>
             <figcaption>Oasis Express</figcaption>
           </a>
         </div>
-        <div class="col-6 col-lg-3">
+        <div class="col">
           <a class="project" href="portfolio.html">
-            <div class="project__img"><img src="images/project-skinsecrets.jpg" alt="Your Skin Secrets branding" data-ph="Your Skin Secrets" /></div>
+            <div class="project__img"><img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/69a626d0-84db-42c8-acca-89f0ccea9beb/Social+Media+Mockup.jpg?format=1000w" alt="Your Skin Secrets Jamaica" loading="lazy" /></div>
             <figcaption>Your Skin Secrets</figcaption>
+          </a>
+        </div>
+        <div class="col">
+          <a class="project" href="portfolio.html">
+            <div class="project__img"><img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/1723751763943-BRH37NY3WQ0Q01DHXGAX/Colombian+Crystals+Website+Mockup.jpg?format=1000w" alt="Colombian Crystals website" loading="lazy" /></div>
+            <figcaption>Colombian Crystals Website</figcaption>
           </a>
         </div>
       </div>
@@ -83,10 +99,10 @@
   </section>
 
   <!-- ===================== ABOUT ME ===================== -->
-  <section class="section about">
+  <section class="section about pt-0">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-md-6 order-2 order-md-1">
+        <div class="col-md-6">
           <p class="eyebrow mb-3">About Me</p>
           <h2 class="mb-4">Hi, I'm Renee</h2>
           <p>
@@ -99,20 +115,20 @@
             vision into something extraordinary.
           </p>
           <div class="social-links mt-4">
-            <a href="#" aria-label="Instagram" title="Instagram">
+            <a href="http://instagram.com/reneekiffin" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="#" aria-label="Behance" title="Behance">
+            <a href="https://www.behance.net/ReneeKiffin" target="_blank" rel="noopener" aria-label="Behance" title="Behance">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 11.3c.9-.4 1.4-1.1 1.4-2.1 0-2-1.5-2.7-3.3-2.7H1.5v11h5.2c2 0 3.7-.9 3.7-3.1 0-1.4-.6-2.5-1.9-3.1zM3.9 8.4h2c.8 0 1.4.3 1.4 1.1 0 .8-.5 1.1-1.3 1.1H3.9zm2.3 6.7H3.9v-2.6h2.4c.9 0 1.6.4 1.6 1.3 0 .9-.7 1.3-1.7 1.3zM22.5 8.7h-5V7.4h5zM19.9 10c-2.3 0-3.9 1.7-3.9 4s1.5 4 3.9 4c1.8 0 3.1-.8 3.6-2.4h-2c-.2.5-.8.8-1.5.8-1 0-1.6-.6-1.7-1.6h5.3c.2-2.6-1.2-4.8-3.7-4.8zm-1.6 3.2c.1-.9.7-1.5 1.6-1.5.9 0 1.4.6 1.5 1.5z"/></svg>
             </a>
-            <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/Reneekiffin/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9z"/></svg>
             </a>
           </div>
         </div>
-        <div class="col-md-6 order-1 order-md-2">
-          <div class="about__portrait mx-auto" style="max-width: 420px;">
-            <img src="images/renee-portrait.jpg" alt="Portrait of Renee Kiffin" data-ph="Portrait" />
+        <div class="col-md-6">
+          <div class="about__portrait mx-auto" style="max-width: 430px;">
+            <img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/34ac49cd-d77b-4610-b847-af6c4091e883/Renee+Kiffin+Graphic+Designer+Portrait.jpg?format=1000w" alt="Portrait of Renee Kiffin" loading="lazy" />
           </div>
         </div>
       </div>
@@ -125,31 +141,31 @@
       <h2 class="section-label mb-5">What I Do</h2>
       <div class="row g-3">
         <div class="col-md-4">
-          <div class="dothing">
-            <img src="images/whatido-design.jpg" alt="" data-ph="Design" />
+          <a class="dothing" href="portfolio.html">
+            <img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/3bb65c81-2178-4f32-9eba-eef30ccc24f8/IMG_9756.jpg?format=1000w" alt="" loading="lazy" />
             <div class="dothing__body">
               <h3>Design</h3>
               <p>Creating visually compelling &amp; functional designs that elevate brands.</p>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-4">
-          <div class="dothing">
-            <img src="images/whatido-photography.jpg" alt="" data-ph="Photography" />
+          <a class="dothing" href="photography.html">
+            <img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/458f23ba-f559-4ad6-ad75-860e31b9b708/IMG_9753.jpg?format=1000w" alt="" loading="lazy" />
             <div class="dothing__body">
-              <h3>Photography</h3>
+              <h3>Photograph</h3>
               <p>Capturing moments that tell stories.</p>
             </div>
-          </div>
+          </a>
         </div>
         <div class="col-md-4">
-          <div class="dothing">
-            <img src="images/whatido-educate.jpg" alt="" data-ph="Educate" />
+          <a class="dothing" href="tutoring.html">
+            <img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/731b5278-8485-4eb5-8c72-62e68b49c5b5/IMG_9754.jpg?format=1000w" alt="" loading="lazy" />
             <div class="dothing__body">
               <h3>Educate</h3>
               <p>Empowering creatives with the skills to excel in the digital arts.</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -161,48 +177,38 @@
       <div class="row g-5">
         <div class="col-md-5">
           <h2 class="services__title mb-4">Services</h2>
-          <a class="btn btn-rk btn-rk-dark" href="contact.html">Let's Get Started</a>
+          <a class="btn btn-rk btn-rk-dark" href="mailto:hello@reneekiffin.com">Let's Get Started</a>
         </div>
         <div class="col-md-7">
           <div class="accordion rk-accordion" id="servicesAccordion">
             <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc1">Brand Identity</button>
-              </h2>
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc1">Brand Identity</button></h2>
               <div id="svc1" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                <div class="accordion-body">Logo design, visual systems, and cohesive brand guidelines that make your business memorable.</div>
+                <div class="accordion-body">Comprehensive branding packages that include everything from color schemes to typography to establish a cohesive brand image.</div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc2">Photo Retouching</button>
-              </h2>
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc2">Photo Retouching</button></h2>
               <div id="svc2" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                <div class="accordion-body">Professional editing and retouching to make every image polished and print-ready.</div>
+                <div class="accordion-body">Enhancing and perfecting images to ensure they look their best for your brand's needs.</div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc3">Web Design</button>
-              </h2>
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc3">Web Design</button></h2>
               <div id="svc3" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                <div class="accordion-body">Responsive, thoughtfully designed websites that reflect your brand and convert visitors.</div>
+                <div class="accordion-body">Developing responsive and user-friendly websites that effectively represent your business.</div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc4">Tutoring</button>
-              </h2>
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc4">Tutoring</button></h2>
               <div id="svc4" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                <div class="accordion-body">One-on-one guidance in design tools and creative fundamentals to grow your skills.</div>
+                <div class="accordion-body">Offering personalized tutoring sessions in graphic design, focusing on tools like Photoshop and Illustrator to help you master your skills.</div>
               </div>
             </div>
             <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc5">Photography</button>
-              </h2>
+              <h2 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#svc5">Photography</button></h2>
               <div id="svc5" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
-                <div class="accordion-body">Product, brand, and lifestyle photography that captures your story authentically.</div>
+                <div class="accordion-body">Offering professional photography services for various needs, including product, portrait, and event photography.</div>
               </div>
             </div>
           </div>
@@ -220,8 +226,8 @@
           <ul class="footer-links text-center" style="max-width: 260px;">
             <li><a href="about.html">About</a></li>
             <li><a href="#">Blog</a></li>
-            <li><a href="#">Behance</a></li>
-            <li><a href="#">LinkedIn</a></li>
+            <li><a href="https://www.behance.net/ReneeKiffin" target="_blank" rel="noopener">Behance</a></li>
+            <li><a href="https://www.linkedin.com/in/Reneekiffin/" target="_blank" rel="noopener">LinkedIn</a></li>
             <li><a href="mailto:hello@reneekiffin.com">hello@reneekiffin.com</a></li>
           </ul>
         </div>
