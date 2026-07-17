@@ -11,32 +11,38 @@
    download each .otf into a local /fonts folder and repoint the src URLs. */
 @font-face {
   font-family: "Celesta-Medium";
-  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a74e9b17a8a8a68e1/1713554714670/Celesta-Medium.otf");
+  src: url("fonts/Celesta-Medium.otf") format("opentype"),
+       url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a74e9b17a8a8a68e1/1713554714670/Celesta-Medium.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "Celesta-Bold";
-  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a4e6ac81820e4c54b/1713554714603/Celesta-Bold.otf");
+  src: url("fonts/Celesta-Bold.otf") format("opentype"),
+       url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a4e6ac81820e4c54b/1713554714603/Celesta-Bold.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "Celesta-Extrabold";
-  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a8327f75da80b271d/1713554714669/Celesta-ExtraBold.otf");
+  src: url("fonts/Celesta-ExtraBold.otf") format("opentype"),
+       url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a8327f75da80b271d/1713554714669/Celesta-ExtraBold.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "Manchester";
-  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6689c97e8ac6370940a0d2e9/1720306046552/Manchester+Signature+otf.otf");
+  src: url("fonts/Manchester Signature otf.otf") format("opentype"),
+       url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6689c97e8ac6370940a0d2e9/1720306046552/Manchester+Signature+otf.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
+  /* De Lionist (script) — not in the uploaded font set, loaded from the CDN. */
   font-family: "Lion";
-  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/677c116af139fa72fbcf0791/1736184170498/De+Lionist.otf");
+  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/677c116af139fa72fbcf0791/1736184170498/De+Lionist.otf") format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: "Nine";
-  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/677c13612118aa72a81a9d45/1736184673852/Behind-The-Nineties-Rg.otf");
+  src: url("fonts/Behind-The-Nineties-Rg.otf") format("opentype"),
+       url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/677c13612118aa72a81a9d45/1736184673852/Behind-The-Nineties-Rg.otf") format("opentype");
   font-display: swap;
 }
 
