@@ -4,141 +4,100 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Renee Kiffin</title>
-  <meta name="description" content="About Renee Kiffin." />
+  <meta name="description" content="About Renee Kiffin — graphic designer and brand identity specialist based in Florida." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@400;500;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Dancing+Script:wght@500;600;700&family=Cutive+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/custom.css" />
 </head>
 <body>
 
-  <header class="site-header">
-    <div class="container nav">
-      <a class="brand" href="index.html">Renee <span>Kiffin</span></a>
-      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
-        <span></span><span></span><span></span>
+  <!-- ===================== NAV ===================== -->
+  <nav class="navbar navbar-expand-md rk-navbar rk-navbar--light">
+    <div class="container rk-nav-inner">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
       </button>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="about.html" aria-current="page">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <div class="collapse navbar-collapse" id="nav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <a class="navbar-brand" href="index.html">Renee Kiffin</a>
     </div>
-  </header>
+  </nav>
 
-  <main>
-    <!-- About hero split -->
-    <section class="section">
-      <div class="container split">
-        <div class="split__media reveal">
-          <img src="images/about-portrait.jpg" alt="Portrait of Renee Kiffin" data-ph="About portrait" />
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section">
+    <div class="container">
+      <div class="row g-5 align-items-start">
+        <div class="col-md-6">
+          <div class="about-page__img">
+            <img src="images/renee-portrait.jpg" alt="Portrait of Renee Kiffin" data-ph="Portrait" />
+          </div>
         </div>
-        <div class="reveal">
-          <p class="eyebrow">About</p>
-          <h1>Hello, I'm Renee.</h1>
+        <div class="col-md-6 about-page__body">
+          <h1 class="page-heading mb-4">About <span class="script text-green">me.</span></h1>
           <p>
-            This is your about introduction. Share who you are, what you do, and
-            what makes your perspective unique. Replace this placeholder copy
-            with your own words.
+            Being a creative is at the core of who I am. I was born in Jamaica and
+            moved to Florida where I completed my A.S. in Graphic Design at Broward
+            College and B.A. in Web Design at UCF. My passion for creativity
+            transcends into various facets of my life, and I enjoy utilizing it to
+            tackle problems.
           </p>
           <p>
-            Talk about your journey, your influences, and the kinds of projects
-            that excite you most.
+            My expertise lies in graphic design and brand identity. Throughout my
+            career, I've collaborated with a variety of businesses, honing a sharp
+            eye for crafting distinct brand identities. A highlight of my work
+            includes the comprehensive rebranding of
+            <a href="portfolio.html">Lifestones Gems and Minerals</a>, where I was
+            able to fully engage my skills in photography, graphic design, web
+            design, development, and social media marketing.
           </p>
-          <a class="btn" href="contact.html">Work with me</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Bio / details -->
-    <section class="section section--alt">
-      <div class="container">
-        <div class="grid grid--3">
-          <div class="reveal">
-            <p class="eyebrow">Background</p>
-            <h3>My Story</h3>
-            <p>Add details about your background, education, and experience here.</p>
-          </div>
-          <div class="reveal">
-            <p class="eyebrow">Approach</p>
-            <h3>How I Work</h3>
-            <p>Describe your process and what clients or collaborators can expect.</p>
-          </div>
-          <div class="reveal">
-            <p class="eyebrow">Focus</p>
-            <h3>What I Do</h3>
-            <p>List your services, specialties, or the areas you focus on.</p>
+          <div class="about-page__meta mt-5">
+            <p class="mb-1"><strong>Interviews</strong></p>
+            <p class="mb-1"><a href="#">VoyageMIA</a></p>
+            <p class="mb-0"><a href="#">Her Campus UCF</a>.</p>
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Secondary image split -->
-    <section class="section">
-      <div class="container split split--reverse">
-        <div class="split__media reveal">
-          <img src="images/about-secondary.jpg" alt="" data-ph="About secondary" />
-        </div>
-        <div class="reveal">
-          <p class="eyebrow">Beyond the work</p>
-          <h2>A little more about me</h2>
-          <p>
-            Use this space for a more personal note — interests, values, or the
-            things that inspire you outside of work.
-          </p>
-          <p>Replace this text and image with your own.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--alt center">
-      <div class="container measure center">
-        <p class="eyebrow">Let's connect</p>
-        <h2>Say hello</h2>
-        <p>Have a question or a project? I'd love to hear from you.</p>
-        <a class="btn" href="contact.html">Get in touch</a>
-      </div>
-    </section>
-  </main>
-
+  <!-- ===================== FOOTER ===================== -->
   <footer class="site-footer">
     <div class="container">
-      <div class="footer-grid">
-        <div>
-          <a class="brand" href="index.html">Renee <span>Kiffin</span></a>
-          <p style="color: rgba(255,255,255,.7); max-width: 34ch;">
-            Portfolio &amp; creative work. Thanks for stopping by.
-          </p>
-        </div>
-        <div>
-          <h4>Explore</h4>
-          <ul class="footer-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
+      <div class="row gy-4">
+        <div class="col-md-6">
+          <div class="footer-brand mb-4">Renee Kiffin</div>
+          <ul class="footer-links text-center" style="max-width: 260px;">
             <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Connect</h4>
-          <ul class="footer-links">
-            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Behance</a></li>
             <li><a href="#">LinkedIn</a></li>
-            <li><a href="contact.html">Email</a></li>
+            <li><a href="mailto:hello@reneekiffin.com">hello@reneekiffin.com</a></li>
           </ul>
         </div>
+        <div class="col-md-6 subscribe text-center">
+          <div class="subscribe-title mb-2">Subscribe</div>
+          <p class="mb-3">Sign up with your email address to receive news and updates.</p>
+          <form class="d-flex justify-content-center" data-stub-form="Thanks for subscribing!">
+            <input type="email" class="form-control me-2" placeholder="Email Address" aria-label="Email Address" required />
+            <button class="btn" type="submit">Sign Up</button>
+          </form>
+          <p data-form-note hidden class="mt-2 small text-green mb-0"></p>
+        </div>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; <span data-year>2026</span> Renee Kiffin. All rights reserved.</span>
-        <span>Made with care.</span>
-      </div>
+      <div class="mt-4 pt-3 small text-secondary">&copy; <span data-year>2026</span> Renee Kiffin</div>
     </div>
   </footer>
 
+  <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

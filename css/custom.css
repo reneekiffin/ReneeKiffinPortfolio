@@ -1,0 +1,398 @@
+/* ==========================================================================
+   Renee Kiffin — Portfolio
+   Custom theme layered on top of Bootstrap 5.
+   All brand tokens (color/type) live here so edits stay in one place.
+   Font pairing: Cormorant Garamond (serif display) + Dancing Script
+   (script accents) + Cutive Mono (typewriter body/UI).
+   ========================================================================== */
+
+/* ---- Brand fonts (self-hosted on Renee's Squarespace CDN) ----------------
+   These are the exact fonts used on reneekiffin.com. To fully self-host them,
+   download each .otf into a local /fonts folder and repoint the src URLs. */
+@font-face {
+  font-family: "Celesta-Medium";
+  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a74e9b17a8a8a68e1/1713554714670/Celesta-Medium.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celesta-Bold";
+  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a4e6ac81820e4c54b/1713554714603/Celesta-Bold.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Celesta-Extrabold";
+  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6622c51a8327f75da80b271d/1713554714669/Celesta-ExtraBold.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Manchester";
+  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/6689c97e8ac6370940a0d2e9/1720306046552/Manchester+Signature+otf.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lion";
+  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/677c116af139fa72fbcf0791/1736184170498/De+Lionist.otf");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Nine";
+  src: url("https://static1.squarespace.com/static/661529ae52f1877956f2ce17/t/677c13612118aa72a81a9d45/1736184673852/Behind-The-Nineties-Rg.otf");
+  font-display: swap;
+}
+
+:root {
+  --rk-green: #2f5241;        /* primary brand green (headings, footer) */
+  --rk-green-dark: #24402f;
+  --rk-green-deep: #163a2b;   /* portfolio hero band */
+  --rk-black: #0b0b0b;        /* home hero */
+  --rk-gray: #6f6f6f;         /* "What I Do" image panels */
+  --rk-cream: #f1efeb;        /* footer / subscribe background */
+  --rk-line: #d3d1cb;
+  --rk-ink: #262626;
+
+  /* Real brand fonts first, web-font fallbacks second. */
+  --rk-display: "Nine", "Cormorant Garamond", Georgia, "Times New Roman", serif; /* H1 */
+  --rk-celesta: "Celesta-Medium", "Cormorant Garamond", Georgia, serif;          /* h2/h3, body, nav */
+  --rk-celesta-bold: "Celesta-Bold", "Cormorant Garamond", Georgia, serif;
+  --rk-script: "Lion", "Dancing Script", "Segoe Script", cursive;
+
+  /* Back-compat aliases so existing rules keep working */
+  --rk-serif: var(--rk-celesta);
+  --rk-mono: var(--rk-celesta);
+}
+
+/* ---- Base ---- */
+body {
+  font-family: var(--rk-mono);
+  color: var(--rk-ink);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.font-serif { font-family: var(--rk-serif); }
+.font-script { font-family: var(--rk-script); }
+.font-mono { font-family: var(--rk-mono); }
+.text-green { color: var(--rk-green) !important; }
+.bg-green { background-color: var(--rk-green) !important; }
+.bg-green-deep { background-color: var(--rk-green-deep) !important; }
+
+h1, .h1 {
+  font-family: var(--rk-display);
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+h2, h3, h4, .h2, .h3 { font-family: var(--rk-celesta); font-weight: 500; }
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--rk-green);
+}
+
+a { color: var(--rk-green); }
+
+/* ---- Buttons ---- */
+.btn-rk {
+  font-family: var(--rk-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: 0.8rem 1.9rem;
+  border-radius: 0;
+  border: 1px solid currentColor;
+  transition: all 0.25s ease;
+}
+.btn-rk-dark { background: transparent; color: var(--rk-ink); border-color: #b9b7b1; }
+.btn-rk-dark:hover { background: var(--rk-ink); color: #fff; border-color: var(--rk-ink); }
+.btn-rk-light { background: transparent; color: #fff; border-color: rgba(255,255,255,0.7); }
+.btn-rk-light:hover { background: #fff; color: var(--rk-black); }
+.btn-rk-green { background: var(--rk-green); color: #fff; border-color: var(--rk-green); }
+.btn-rk-green:hover { background: var(--rk-green-dark); color: #fff; border-color: var(--rk-green-dark); }
+
+/* ---- Image placeholder (shown until a real file is dropped in) ---- */
+.ph {
+  width: 100%;
+  height: 100%;
+  min-height: 200px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 1rem;
+  color: #8a8a8a;
+  font-family: var(--rk-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background:
+    repeating-linear-gradient(45deg, #ece8e1, #ece8e1 12px, #e3ded5 12px, #e3ded5 24px);
+}
+
+/* ==========================================================================
+   Navbar — shared. Nav links left, brand centered.
+   Two variants: over-dark (white text) and light (dark text).
+   ========================================================================== */
+.rk-navbar { padding-block: 1.1rem; }
+.rk-navbar .rk-nav-inner { position: relative; }
+.rk-navbar .nav-link {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  padding: 0.4rem 0.9rem 0.4rem 0;
+}
+.rk-navbar .navbar-brand {
+  font-family: var(--rk-serif);
+  font-size: 1.6rem;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+}
+@media (min-width: 768px) {
+  .rk-navbar .navbar-brand {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
+}
+
+/* over-dark (home, portfolio) */
+.rk-navbar--over-dark {
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  z-index: 20;
+}
+.rk-navbar--over-dark .nav-link { color: rgba(255,255,255,0.88); }
+.rk-navbar--over-dark .nav-link:hover,
+.rk-navbar--over-dark .nav-link.active { color: #fff; }
+.rk-navbar--over-dark .navbar-brand { color: #fff; }
+.rk-navbar--over-dark .navbar-toggler { border-color: rgba(255,255,255,0.4); }
+.rk-navbar--over-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* light (about, contact) */
+.rk-navbar--light .nav-link { color: #444; }
+.rk-navbar--light .nav-link:hover,
+.rk-navbar--light .nav-link.active { color: var(--rk-green); text-decoration: underline; text-underline-offset: 4px; }
+.rk-navbar--light .navbar-brand { color: var(--rk-green); }
+
+/* ==========================================================================
+   Home Hero (split camera image / black)
+   ========================================================================== */
+.hero {
+  position: relative;
+  min-height: 90vh;
+  background: var(--rk-black);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+.hero__img { position: absolute; top: 0; left: 0; bottom: 0; width: 42%; z-index: 1; }
+.hero__img img, .hero__img .ph { width: 100%; height: 100%; object-fit: cover; }
+.hero__content { position: relative; z-index: 5; color: #fff; padding-top: 3rem; }
+.hero h1 {
+  font-family: var(--rk-display);
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.06;
+  text-transform: uppercase;
+  margin-bottom: 0;
+}
+.hero .script {
+  font-family: var(--rk-script);
+  text-transform: none;
+  font-weight: 600;
+  font-size: clamp(3rem, 7vw, 5.5rem);
+  line-height: 1;
+  display: block;
+  margin: 0.05em 0 0.35em;
+}
+.hero__subtitle { font-family: var(--rk-mono); font-size: 0.95rem; color: rgba(255,255,255,0.85); }
+
+@media (max-width: 767.98px) {
+  .hero { display: block; }
+  .hero__img { position: relative; width: 100%; height: 38vh; }
+  .hero__content { padding: 2.5rem 0 3.5rem; }
+}
+
+/* ==========================================================================
+   Section helpers
+   ========================================================================== */
+.section { padding-block: clamp(3.5rem, 8vw, 6.5rem); }
+.section-label {
+  font-family: var(--rk-serif);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  text-align: center;
+}
+
+/* ==========================================================================
+   Recent Projects
+   ========================================================================== */
+.project { text-decoration: none; color: inherit; display: block; }
+.project__img { aspect-ratio: 4 / 3; overflow: hidden; background: var(--rk-cream); }
+.project__img img, .project__img .ph {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.project:hover .project__img img { transform: scale(1.04); }
+.project figcaption { text-align: center; margin-top: 0.8rem; font-size: 0.85rem; color: #444; }
+
+/* ==========================================================================
+   About Me (home section)
+   ========================================================================== */
+.about__portrait {
+  border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+  overflow: hidden;
+  aspect-ratio: 3 / 4;
+  background: var(--rk-cream);
+}
+.about__portrait img, .about__portrait .ph { width: 100%; height: 100%; object-fit: cover; }
+.about h2 {
+  color: var(--rk-green);
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  text-transform: uppercase;
+}
+.social-links { display: flex; gap: 0.8rem; }
+.social-links a {
+  width: 34px; height: 34px;
+  display: grid; place-items: center;
+  color: var(--rk-green);
+  border: 1px solid var(--rk-line);
+  border-radius: 50%;
+  transition: background 0.25s, color 0.25s;
+}
+.social-links a:hover { background: var(--rk-green); color: #fff; }
+.social-links svg { width: 15px; height: 15px; }
+
+/* ==========================================================================
+   What I Do
+   ========================================================================== */
+.dothing {
+  position: relative;
+  min-height: 300px;
+  background: var(--rk-gray);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  color: #fff;
+}
+.dothing img, .dothing .ph {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.92;
+}
+.dothing::after { content: ""; position: absolute; inset: 0; background: rgba(70,70,70,0.42); }
+.dothing__body { position: relative; z-index: 2; padding: 1.6rem; }
+.dothing__body h3 { font-family: var(--rk-script); font-weight: 600; font-size: 2.4rem; margin-bottom: 0.1rem; }
+.dothing__body p { font-size: 0.85rem; margin: 0; color: rgba(255,255,255,0.92); max-width: 26ch; }
+
+/* ==========================================================================
+   Services (accordion)
+   ========================================================================== */
+.services__title { color: var(--rk-green); font-size: clamp(2.2rem, 5vw, 3.2rem); }
+.rk-accordion .accordion-item { border: 0; border-bottom: 1px solid var(--rk-line); background: transparent; }
+.rk-accordion .accordion-button {
+  background: transparent; box-shadow: none;
+  font-family: var(--rk-mono); font-size: 0.9rem; color: #2a2a2a; padding: 1.1rem 0;
+}
+.rk-accordion .accordion-button:not(.collapsed) { color: var(--rk-green); }
+.rk-accordion .accordion-button::after {
+  background-image: none; content: "+"; font-size: 1.4rem;
+  width: auto; height: auto; transform: none; color: var(--rk-green); line-height: 1;
+}
+.rk-accordion .accordion-button:not(.collapsed)::after { content: "\2013"; }
+.rk-accordion .accordion-body { padding: 0 0 1.1rem; color: #666; font-size: 0.88rem; }
+
+/* ==========================================================================
+   Page hero (Contact / About headings)
+   ========================================================================== */
+.page-heading {
+  font-family: var(--rk-display);
+  color: var(--rk-green);
+  text-transform: uppercase;
+  font-size: clamp(2.6rem, 6vw, 4.2rem);
+  line-height: 1.02;
+}
+.page-heading .script { font-family: var(--rk-script); text-transform: none; }
+
+/* ==========================================================================
+   Contact form
+   ========================================================================== */
+.rk-form label { font-size: 0.9rem; color: #333; margin-bottom: 0.25rem; }
+.rk-form .form-control,
+.rk-form .form-select {
+  font-family: var(--rk-mono);
+  font-size: 0.92rem;
+  border: 0;
+  border-bottom: 1px solid var(--rk-line);
+  border-radius: 0;
+  padding-left: 0;
+  box-shadow: none;
+  background-color: transparent;
+}
+.rk-form .form-control:focus,
+.rk-form .form-select:focus { box-shadow: none; border-bottom-color: var(--rk-green); }
+.rk-form textarea.form-control { border: 1px solid var(--rk-line); padding: 0.8rem; }
+.rk-form .form-control::placeholder { color: #aaa; }
+.btn-send {
+  font-family: var(--rk-mono);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.78rem;
+  background: #cfcfcf;
+  color: #fff;
+  border: 0;
+  border-radius: 0;
+  padding: 0.7rem 2rem;
+  transition: background 0.25s ease;
+}
+.btn-send:hover { background: var(--rk-green); color: #fff; }
+.form-fineprint { font-size: 0.72rem; color: #999; line-height: 1.5; }
+
+/* ==========================================================================
+   About page
+   ========================================================================== */
+.about-page__img { background: var(--rk-cream); }
+.about-page__img img, .about-page__img .ph { width: 100%; height: auto; display: block; }
+.about-page__body { color: #2f2f2f; }
+.about-page__body p { margin-bottom: 1.4rem; }
+.about-page__meta { font-size: 0.88rem; }
+.about-page__meta a { display: inline-block; }
+
+/* ==========================================================================
+   Portfolio page
+   ========================================================================== */
+.portfolio-hero { background: var(--rk-green-deep); color: #fff; padding-top: 8rem; }
+.portfolio-hero h1 {
+  font-family: var(--rk-display);
+  text-transform: uppercase;
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  line-height: 1.02;
+}
+.portfolio-hero h1 .script { font-family: var(--rk-script); text-transform: none; font-size: 1.3em; }
+.portfolio-hero p { color: rgba(255,255,255,0.85); font-size: 0.95rem; max-width: 60ch; }
+.portfolio-grid .tile { display: block; overflow: hidden; background: var(--rk-cream); }
+.portfolio-grid .tile img, .portfolio-grid .tile .ph {
+  width: 100%; height: 100%; object-fit: cover; aspect-ratio: 4 / 3;
+  transition: transform 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.portfolio-grid .tile:hover img { transform: scale(1.03); }
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+.site-footer { background: var(--rk-cream); padding-block: 3.5rem; color: #3a3a3a; }
+.site-footer .footer-brand { font-family: var(--rk-serif); color: var(--rk-green); font-size: 1.7rem; }
+.site-footer a { color: #3a3a3a; text-decoration: underline; text-underline-offset: 3px; }
+.site-footer a:hover { color: var(--rk-green); }
+.footer-links { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.7rem; }
+.subscribe-title { font-family: var(--rk-serif); color: var(--rk-green); font-size: 1.5rem; }
+.subscribe input { border: 1px solid var(--rk-line); border-radius: 0; background: #fff; font-family: var(--rk-mono); font-size: 0.9rem; }
+.subscribe input:focus { box-shadow: none; border-color: var(--rk-green); }
+.subscribe .btn {
+  border-radius: 0; border: 1px solid var(--rk-ink); background: transparent; color: var(--rk-ink);
+  font-family: var(--rk-mono); text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.72rem;
+}
+.subscribe .btn:hover { background: var(--rk-ink); color: #fff; }
