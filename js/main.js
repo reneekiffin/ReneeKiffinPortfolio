@@ -22,8 +22,9 @@
                 '<ul class="dropdown-menu"><li><a class="dropdown-item" href="portfolio.html">Graphic Design</a></li></ul>' +
               '</li>' +
               '<li class="nav-item dropdown">' +
-                '<a class="nav-link dropdown-toggle' + activeCls("services") + '" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>' +
+                '<a class="nav-link dropdown-toggle' + activeCls("services") + '" href="services.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>' +
                 '<ul class="dropdown-menu">' +
+                  '<li><a class="dropdown-item" href="services.html">All Services</a></li>' +
                   '<li><a class="dropdown-item" href="brand-design.html">Brand Design</a></li>' +
                   '<li><a class="dropdown-item" href="web-design.html">Web Design</a></li>' +
                   '<li><a class="dropdown-item" href="photo-retouching.html">Photo Retouching</a></li>' +
