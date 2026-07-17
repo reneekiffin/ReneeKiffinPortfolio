@@ -389,6 +389,37 @@ a { color: var(--rk-green); }
 .portfolio-grid .tile:hover img { transform: scale(1.03); }
 
 /* ==========================================================================
+   Service pages (Brand Design, Web Design, Photo Retouching, Photography)
+   ========================================================================== */
+.svc-hero {
+  position: relative;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  background: var(--rk-black);
+  overflow: hidden;
+}
+.svc-hero__bg { position: absolute; inset: 0; z-index: 1; }
+.svc-hero__bg img { width: 100%; height: 100%; object-fit: cover; }
+.svc-hero__bg::after { content: ""; position: absolute; inset: 0; background: rgba(0,0,0,0.5); }
+.svc-hero__content { position: relative; z-index: 5; padding: 7rem 1.25rem 3rem; max-width: 900px; }
+.svc-hero__content h1 { font-family: var(--rk-display); text-transform: uppercase; font-size: clamp(2.2rem,5vw,3.6rem); }
+.svc-hero__content .script { font-family: var(--rk-script); text-transform: none; }
+.svc-hero__content p { color: rgba(255,255,255,0.9); }
+
+.price-card { border: 1px solid var(--rk-line); padding: 1.8rem 1.6rem; height: 100%; }
+.price-card .price { font-family: var(--rk-display); color: var(--rk-green); font-size: 1.7rem; line-height: 1; }
+.price-card h3 { font-size: 1.15rem; margin: 0.4rem 0 1rem; }
+.price-list { list-style: none; padding-left: 0; margin: 0; }
+.price-list li { font-size: 0.8rem; padding: 0.3rem 0; border-bottom: 1px dashed var(--rk-line); color: #555; }
+
+.svc-project img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 16/9; background: var(--rk-cream); }
+.svc-gallery img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: 1/1; background: var(--rk-cream); }
+
+/* ==========================================================================
    Footer
    ========================================================================== */
 .site-footer { background: var(--rk-cream); padding-block: 3.5rem; color: #3a3a3a; }

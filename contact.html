@@ -5,38 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact — Renee Kiffin</title>
   <meta name="description" content="Get in touch with Renee Kiffin for freelance projects, collaborations, and creative consultations." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Dancing+Script:wght@500;600;700&family=Cutive+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="css/custom.css" />
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
-  <nav class="navbar navbar-expand-md rk-navbar rk-navbar--light">
-    <div class="container rk-nav-inner">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <a class="navbar-brand" href="index.html">Renee Kiffin</a>
-    </div>
-  </nav>
+  <div data-chrome="nav" data-variant="light" data-active="contact"></div>
 
-  <!-- ===================== CONTACT ===================== -->
   <section class="section">
     <div class="container">
       <div class="row g-5">
-        <!-- Left: intro -->
         <div class="col-lg-5">
           <h1 class="page-heading mb-4">I'd Love<br />to Hear<br />From You</h1>
           <p class="mb-4" style="max-width: 40ch;">
@@ -45,65 +24,41 @@
             projects, collaborations, and creative consultations.
           </p>
           <div class="social-links">
-            <a href="#" aria-label="Instagram" title="Instagram">
+            <a href="http://instagram.com/reneekiffin" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="#" aria-label="Behance" title="Behance">
+            <a href="https://www.behance.net/ReneeKiffin" target="_blank" rel="noopener" aria-label="Behance" title="Behance">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8.5 11.3c.9-.4 1.4-1.1 1.4-2.1 0-2-1.5-2.7-3.3-2.7H1.5v11h5.2c2 0 3.7-.9 3.7-3.1 0-1.4-.6-2.5-1.9-3.1zM3.9 8.4h2c.8 0 1.4.3 1.4 1.1 0 .8-.5 1.1-1.3 1.1H3.9zm2.3 6.7H3.9v-2.6h2.4c.9 0 1.6.4 1.6 1.3 0 .9-.7 1.3-1.7 1.3zM22.5 8.7h-5V7.4h5zM19.9 10c-2.3 0-3.9 1.7-3.9 4s1.5 4 3.9 4c1.8 0 3.1-.8 3.6-2.4h-2c-.2.5-.8.8-1.5.8-1 0-1.6-.6-1.7-1.6h5.3c.2-2.6-1.2-4.8-3.7-4.8zm-1.6 3.2c.1-.9.7-1.5 1.6-1.5.9 0 1.4.6 1.5 1.5z"/></svg>
             </a>
-            <a href="#" aria-label="LinkedIn" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/Reneekiffin/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3-.02-2.96-1.8-2.96-1.8 0-2.08 1.4-2.08 2.86V21H9z"/></svg>
             </a>
           </div>
         </div>
 
-        <!-- Right: form -->
         <div class="col-lg-7">
           <form class="rk-form" data-stub-form="Thanks — your message is ready to send. Connect this form to your email or a form service to go live." novalidate>
-            <div class="mb-4">
-              <label for="fullname">Full name *</label>
-              <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Your name here" required />
-            </div>
-            <div class="mb-4">
-              <label for="email">Email *</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="E.g. myemail@email.com" required />
-            </div>
-            <div class="mb-4">
-              <label for="phone">Phone number</label>
-              <input type="tel" class="form-control" id="phone" name="phone" placeholder="E.g. 541 444 0755" />
-            </div>
-            <div class="mb-4">
-              <label for="duedate">Project Due Date</label>
-              <input type="date" class="form-control" id="duedate" name="duedate" placeholder="MM/DD/YYYY" />
-            </div>
+            <div class="mb-4"><label for="fullname">Full name *</label><input type="text" class="form-control" id="fullname" placeholder="Your name here" required /></div>
+            <div class="mb-4"><label for="email">Email *</label><input type="email" class="form-control" id="email" placeholder="E.g. myemail@email.com" required /></div>
+            <div class="mb-4"><label for="phone">Phone number</label><input type="tel" class="form-control" id="phone" placeholder="E.g. 541 444 0755" /></div>
+            <div class="mb-4"><label for="duedate">Project Due Date</label><input type="date" class="form-control" id="duedate" placeholder="MM/DD/YYYY" /></div>
             <div class="mb-4">
               <label for="projecttype">What type of project are you looking for? *</label>
-              <select class="form-select" id="projecttype" name="projecttype" required>
+              <select class="form-select" id="projecttype" required>
                 <option value="" selected disabled>Select an option</option>
-                <option>Brand Identity</option>
-                <option>Web Design</option>
-                <option>Photography</option>
-                <option>Photo Retouching</option>
-                <option>Tutoring</option>
-                <option>Other</option>
+                <option>Brand Identity</option><option>Web Design</option><option>Photography</option>
+                <option>Photo Retouching</option><option>Tutoring</option><option>Other</option>
               </select>
             </div>
             <div class="mb-4">
               <label for="referral">How did you hear about us?</label>
-              <select class="form-select" id="referral" name="referral">
+              <select class="form-select" id="referral">
                 <option value="" selected disabled>Select an option</option>
-                <option>Instagram</option>
-                <option>Behance</option>
-                <option>LinkedIn</option>
-                <option>Referral</option>
-                <option>Google Search</option>
-                <option>Other</option>
+                <option>Instagram</option><option>Behance</option><option>LinkedIn</option>
+                <option>Referral</option><option>Google Search</option><option>Other</option>
               </select>
             </div>
-            <div class="mb-4">
-              <label for="message">Tell me more about this project</label>
-              <textarea class="form-control" id="message" name="message" rows="4" placeholder="What do I need to know about the project?"></textarea>
-            </div>
+            <div class="mb-4"><label for="message">Tell me more about this project</label><textarea class="form-control" id="message" rows="4" placeholder="What do I need to know about the project?"></textarea></div>
             <div class="d-flex flex-column flex-sm-row-reverse align-items-sm-end justify-content-between gap-3">
               <button type="submit" class="btn-send align-self-start">Send</button>
               <p class="form-fineprint mb-0">
@@ -120,34 +75,7 @@
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-6">
-          <div class="footer-brand mb-4">Renee Kiffin</div>
-          <ul class="footer-links text-center" style="max-width: 260px;">
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Behance</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="mailto:hello@reneekiffin.com">hello@reneekiffin.com</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 subscribe text-center">
-          <div class="subscribe-title mb-2">Subscribe</div>
-          <p class="mb-3">Sign up with your email address to receive news and updates.</p>
-          <form class="d-flex justify-content-center" data-stub-form="Thanks for subscribing!">
-            <input type="email" class="form-control me-2" placeholder="Email Address" aria-label="Email Address" required />
-            <button class="btn" type="submit">Sign Up</button>
-          </form>
-          <p data-form-note hidden class="mt-2 small text-green mb-0"></p>
-        </div>
-      </div>
-      <div class="mt-4 pt-3 small text-secondary">&copy; <span data-year>2026</span> Renee Kiffin</div>
-    </div>
-  </footer>
-
+  <div data-chrome="footer"></div>
   <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>

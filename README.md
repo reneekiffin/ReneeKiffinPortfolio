@@ -1,71 +1,80 @@
 # Renee Kiffin — Portfolio
 
-A static clone/rebuild of the reneekiffin.com Squarespace site, built on
-**Bootstrap 5** for easy long-term maintenance. Plain HTML/CSS/JS — no build
-step, no framework, no npm install required to run.
+A static clone of **reneekiffin.com**, rebuilt on **Bootstrap 5** for easy
+long-term maintenance. Plain HTML/CSS/JS — no build step, no framework, no
+`npm install` required to run.
 
 ## Pages
 
-| File            | Purpose                                              |
-|-----------------|------------------------------------------------------|
-| `index.html`    | Home — hero, recent projects, about, what I do, services |
-| `portfolio.html`| Graphic Design & Branding — project grid             |
-| `about.html`    | About Renee                                          |
-| `contact.html`  | Contact form + intro                                 |
+| File                   | Page                                    |
+|------------------------|-----------------------------------------|
+| `index.html`           | Home                                    |
+| `portfolio.html`       | Portfolio ▸ Graphic Design              |
+| `brand-design.html`    | Services ▸ Brand Design (packages/pricing) |
+| `web-design.html`      | Services ▸ Web Design                   |
+| `tutoring.html`        | Services ▸ Tutoring *(stub — awaiting content)* |
+| `photo-retouching.html`| Services ▸ Photo Retouching             |
+| `photography.html`     | Services ▸ Photography                  |
+| `weddings.html`        | Services ▸ Wedding Stationary *(stub — awaiting content)* |
+| `about.html`           | About                                   |
+| `contact.html`         | Contact                                 |
 
 ## Structure
 
 ```
 .
-├── index.html / portfolio.html / about.html / contact.html
-├── css/custom.css              # Brand theme layered on Bootstrap (colors, fonts, components)
-├── js/main.js                  # Image placeholders, form stubs, footer year
-├── vendor/bootstrap/           # Bootstrap 5.3.3 (vendored locally — works offline)
-└── images/                     # Your images (see images/README.md for filenames)
+├── *.html                # One file per page
+├── css/custom.css        # Brand theme on top of Bootstrap (colors, fonts, components)
+├── js/main.js            # Shared nav + footer (injected once), form stubs, helpers
+├── vendor/bootstrap/     # Bootstrap 5.3.3, vendored locally (works offline)
+└── images/               # Optional — see "Images" below (site currently links the live CDN)
 ```
+
+## Shared nav & footer (edit once)
+
+The navigation and footer are defined a **single time** in `js/main.js` and
+injected into every page via `<div data-chrome="nav" ...>` / `<div data-chrome="footer">`
+placeholders. Change a nav link or footer detail there and it updates site-wide.
+
+## Design system
+
+Brand tokens live at the top of `css/custom.css`:
+
+- **Colors** — `--rk-green` (brand green), `--rk-black`, `--rk-green-deep`, `--rk-cream`.
+- **Fonts** — the real Squarespace fonts are loaded via `@font-face` from Renee's
+  Squarespace CDN: **Nine** (Behind The Nineties) for H1 display, **Celesta-Medium**
+  for body/subheads/nav, **Lion** (De Lionist) for script accents. Web-font
+  fallbacks (Cormorant Garamond / Dancing Script / Cutive Mono) load if the CDN
+  is ever unreachable.
+
+## Images
+
+Images reference the **live Squarespace CDN** directly (e.g.
+`images.squarespace-cdn.com/.../business+cards.png`), so they are pixel-identical
+to the original site with zero downloads. They load in any browser with internet
+access.
+
+To make the site fully self-contained later, download each referenced image into
+`images/` and swap the CDN URLs for local paths.
 
 ## Running locally
 
-Fully static — just open `index.html` in a browser, or serve the folder:
+Fully static — open `index.html` in a browser, or serve the folder:
 
 ```bash
 python3 -m http.server 8000   # then visit http://localhost:8000
 ```
 
-## Design system (edit in one place)
-
-All brand tokens live at the top of `css/custom.css`:
-
-- **Colors** — `--rk-green` (brand green), `--rk-black`, `--rk-green-deep`
-  (portfolio hero), `--rk-cream` (footer).
-- **Fonts** — Cormorant Garamond (serif display), Dancing Script (script
-  accents), Cutive Mono (typewriter body). Loaded from Google Fonts.
-
-## Adding images
-
-See [`images/README.md`](images/README.md). Drop files in with the listed
-filenames and they appear automatically. Missing images render as labeled
-placeholders until then.
-
 ## Making the forms work
 
-The contact and subscribe forms are front-end stubs (they show a confirmation
-but don't send). To go live, point them at your email or a form service
-(Formspree, Squarespace Forms, Netlify Forms, etc.) — see the `<form>` tags in
-`contact.html` / the footer.
+The contact and subscribe forms are front-end stubs (they show a confirmation but
+don't send). Point them at your email or a form service (Formspree, Squarespace
+Forms, Netlify Forms, etc.) to go live.
 
-## Why Bootstrap?
+## Notes / remaining work
 
-Bootstrap gives you a well-documented grid, navbar, accordion, and form
-components, so future edits (new sections, new portfolio pieces, layout tweaks)
-are straightforward without custom CSS gymnastics. The library is vendored in
-`vendor/bootstrap/`, so the site has zero external runtime dependencies and
-works offline.
-
-## Note on the "exact clone"
-
-The live site couldn't be fetched from the build environment (outbound web
-access is blocked by the sandbox network policy), so the layout, copy, colors,
-and fonts were reconstructed from screenshots of each page. Swap in the real
-images (`images/`) to complete it. The fonts are close web-font matches; adjust
-in `css/custom.css` if you know the exact originals.
+- **Tutoring** and **Wedding Stationary** are placeholder stubs — their page
+  content wasn't captured yet. Paste those pages (or use a "SingleFile" browser
+  extension to save them) and they can be built out like the others.
+- Background **videos** on the original (hero, some service heroes use YouTube
+  backgrounds) are represented here by their still fallback images.

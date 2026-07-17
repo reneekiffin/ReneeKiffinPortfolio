@@ -5,40 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About — Renee Kiffin</title>
   <meta name="description" content="About Renee Kiffin — graphic designer and brand identity specialist based in Florida." />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Dancing+Script:wght@500;600;700&family=Cutive+Mono&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="vendor/bootstrap/bootstrap.min.css" />
   <link rel="stylesheet" href="css/custom.css" />
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
-  <nav class="navbar navbar-expand-md rk-navbar rk-navbar--light">
-    <div class="container rk-nav-inner">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="nav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="portfolio.html">Portfolio</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#services">Services</a></li>
-          <li class="nav-item"><a class="nav-link active" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-      <a class="navbar-brand" href="index.html">Renee Kiffin</a>
-    </div>
-  </nav>
+  <div data-chrome="nav" data-variant="light" data-active="about"></div>
 
-  <!-- ===================== ABOUT ===================== -->
   <section class="section">
     <div class="container">
       <div class="row g-5 align-items-start">
         <div class="col-md-6">
           <div class="about-page__img">
-            <img src="images/renee-portrait.jpg" alt="Portrait of Renee Kiffin" data-ph="Portrait" />
+            <img src="https://images.squarespace-cdn.com/content/v1/661529ae52f1877956f2ce17/34ac49cd-d77b-4610-b847-af6c4091e883/Renee+Kiffin+Graphic+Designer+Portrait.jpg?format=1500w" alt="Portrait of Renee Kiffin" loading="lazy" />
           </div>
         </div>
         <div class="col-md-6 about-page__body">
@@ -69,34 +49,7 @@
     </div>
   </section>
 
-  <!-- ===================== FOOTER ===================== -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="row gy-4">
-        <div class="col-md-6">
-          <div class="footer-brand mb-4">Renee Kiffin</div>
-          <ul class="footer-links text-center" style="max-width: 260px;">
-            <li><a href="about.html">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Behance</a></li>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="mailto:hello@reneekiffin.com">hello@reneekiffin.com</a></li>
-          </ul>
-        </div>
-        <div class="col-md-6 subscribe text-center">
-          <div class="subscribe-title mb-2">Subscribe</div>
-          <p class="mb-3">Sign up with your email address to receive news and updates.</p>
-          <form class="d-flex justify-content-center" data-stub-form="Thanks for subscribing!">
-            <input type="email" class="form-control me-2" placeholder="Email Address" aria-label="Email Address" required />
-            <button class="btn" type="submit">Sign Up</button>
-          </form>
-          <p data-form-note hidden class="mt-2 small text-green mb-0"></p>
-        </div>
-      </div>
-      <div class="mt-4 pt-3 small text-secondary">&copy; <span data-year>2026</span> Renee Kiffin</div>
-    </div>
-  </footer>
-
+  <div data-chrome="footer"></div>
   <script src="vendor/bootstrap/bootstrap.bundle.min.js"></script>
   <script src="js/main.js"></script>
 </body>
