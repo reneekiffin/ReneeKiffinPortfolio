@@ -26,10 +26,8 @@
                 '<ul class="dropdown-menu">' +
                   '<li><a class="dropdown-item" href="brand-design.html">Brand Design</a></li>' +
                   '<li><a class="dropdown-item" href="web-design.html">Web Design</a></li>' +
-                  '<li><a class="dropdown-item" href="tutoring.html">Tutoring</a></li>' +
                   '<li><a class="dropdown-item" href="photo-retouching.html">Photo Retouching</a></li>' +
                   '<li><a class="dropdown-item" href="photography.html">Photography</a></li>' +
-                  '<li><a class="dropdown-item" href="weddings.html">Wedding Stationary</a></li>' +
                 '</ul>' +
               '</li>' +
               '<li class="nav-item"><a class="nav-link' + activeCls("about") + '" href="about.html">About</a></li>' +
